@@ -183,6 +183,7 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void corverterPessoa(File arquivo) {
+        
         try(BufferedReader br = new BufferedReader(new InputStreamReader (
                 new FileInputStream(arquivo.getAbsolutePath()),"UTF-8"))) {
             
@@ -227,8 +228,8 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
                 
                 pessoaList.add(pessoa);
                 
-                PessoaDAO dao = new PessoaDAO();
-                dao.insert(pessoa);
+//                PessoaDAO dao = new PessoaDAO();
+//                dao.insert(pessoa);
 
             }
             

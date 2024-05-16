@@ -1,0 +1,9 @@
+br\unipar\manipular\interfaces\PessoaDAO.class
+br\unipar\manipular\TelaManipulacaoArquivo$1.class
+br\unipar\manipular\tableModel\PessoaTableModel.class
+br\unipar\manipular\models\Pessoa.class
+br\unipar\manipular\TelaManipulacaoArquivo$2.class
+br\unipar\manipular\TelaManipulacaoArquivo.class
+br\unipar\manipular\interfaces\PessoaDAOImpl.class
+br\unipar\manipular\Manipular.class
+br\unipar\manipular\util\EntityManagerUtil.class

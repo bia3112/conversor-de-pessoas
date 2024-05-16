@@ -6,6 +6,8 @@ package br.unipar.manipular.interfaces;
 
 import br.unipar.manipular.models.Pessoa;
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 
 /**
  *

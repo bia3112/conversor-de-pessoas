@@ -1,6 +1,7 @@
-C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\src\main\java\br\unipar\manipular\Manipular.java
-C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\src\main\java\br\unipar\manipular\util\EntityManagerUtil.java
-C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\src\main\java\br\unipar\manipular\interfaces\PessoaDAOImpl.java
-C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\src\main\java\br\unipar\manipular\models\Pessoa.java
-C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\src\main\java\br\unipar\manipular\TelaManipulacaoArquivo.java
-C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\src\main\java\br\unipar\manipular\interfaces\PessoaDAO.java
+C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\conversor-de-pessoas\manipular\src\main\java\br\unipar\manipular\Manipular.java
+C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\conversor-de-pessoas\manipular\src\main\java\br\unipar\manipular\interfaces\PessoaDAO.java
+C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\conversor-de-pessoas\manipular\src\main\java\br\unipar\manipular\TelaManipulacaoArquivo.java
+C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\conversor-de-pessoas\manipular\src\main\java\br\unipar\manipular\interfaces\PessoaDAOImpl.java
+C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\conversor-de-pessoas\manipular\src\main\java\br\unipar\manipular\models\Pessoa.java
+C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\conversor-de-pessoas\manipular\src\main\java\br\unipar\manipular\util\EntityManagerUtil.java
+C:\Users\Beatr\OneDrive\Documentos\NetBeansProjects\manipular\conversor-de-pessoas\manipular\src\main\java\br\unipar\manipular\tableModel\PessoaTableModel.java

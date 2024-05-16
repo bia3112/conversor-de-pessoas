@@ -4,6 +4,10 @@
  */
 package br.unipar.manipular.util;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 /**
  *
  * @author Beatr
@@ -17,7 +21,7 @@ public class EntityManagerUtil {
     public static EntityManagerFactory getEntityManagerFactory() {
         if(emf == null) {
             emf = Persistence
-                    .createEntityManagerFactory("PDV");
+                    .createEntityManagerFactory("ManipularArquivo");
             System.out.println("conexão aberta!");
         }
         return emf;

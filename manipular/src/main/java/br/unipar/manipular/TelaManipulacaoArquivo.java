@@ -5,7 +5,9 @@
 package br.unipar.manipular;
 
 import br.unipar.manipular.interfaces.PessoaDAO;
+import br.unipar.manipular.interfaces.PessoaDAOImpl;
 import br.unipar.manipular.models.Pessoa;
+import br.unipar.manipular.util.EntityManagerUtil;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -214,6 +216,7 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
                 String[] campos = linha.split(",");
                 
                 Pessoa pessoa = new Pessoa();
+                
                 pessoa.setId(id++);
                 pessoa.setNome(campos[0]);
                 pessoa.setIdade(Integer.parseInt(campos[1]));
@@ -245,10 +248,9 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
                 
                 pessoaList.add(pessoa);
                 
-//                PessoaDAO dao = new PessoaDAO();
-//                dao.insert(pessoa);
-
-            
+               PessoaDAO pessoaDAO = new PessoaDAOImpl(EntityManagerUtil.getManager());
+        
+                pessoaDAO.save(pessoa);  
 
             }
              JOptionPane.showMessageDialog(null, 

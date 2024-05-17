@@ -27,7 +27,7 @@ public class PessoaDAOImpl implements PessoaDAO {
     public Pessoa save(Pessoa pessoa) {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        entityManager.persist(pessoa);
+        entityManager.merge(pessoa);;
         transaction.commit();
         entityManager.close();
         

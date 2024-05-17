@@ -94,7 +94,7 @@ public class ExportacaodeArquivos extends javax.swing.JFrame {
             for (int i = 0; i < 3; i++) { // Escreva 3 linhas em branco
                 writer.write(",,,\n"); // Escreve 3 células vazias, separadas por vírgulas
             }
-            System.out.println("Arquivo CSV criado com sucesso!");
+            System.out.println("Arquivo CSV criado com sucesso em: " + System.getProperty("user.dir"));
         } catch (IOException e) {
             System.err.println("Erro ao escrever no arquivo CSV: " + e.getMessage());
         }

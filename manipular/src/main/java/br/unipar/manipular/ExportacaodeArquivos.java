@@ -104,12 +104,6 @@ public class ExportacaodeArquivos extends javax.swing.JFrame {
 
             PessoaDAO pessoaDAO = new PessoaDAOImpl(EntityManagerUtil.getManager());
             List<Pessoa> pessoas = pessoaDAO.findAll();
-           
-            if (pessoas.isEmpty()) {
-    System.out.println("A lista de pessoas está vazia.");
-} else {
-    System.out.println("Número de pessoas encontradas: " + pessoas.size());
-}
             
              for (Pessoa pessoa : pessoas) {
                 writer.write(pessoa.getId() + "," +

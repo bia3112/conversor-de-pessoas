@@ -27,22 +27,17 @@ public class Menu  extends JFrame{
         setSize(600, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        
-         // Criando a barra de menu
+
         JMenuBar menuBar = new JMenuBar();
         
-         //Menu de Exercícios
         JMenu menuExercicios = new JMenu("Menu");
         
-        //Itens do Menu de Exercícios
         JMenuItem manipulcao = new JMenuItem("Abrir Importação de arquivos");
         JMenuItem exportacao = new JMenuItem("Abrir Exportção de arquivos");
         
-        //Adiciona os menus itens no menu pai
         menuExercicios.add(manipulcao);
         menuExercicios.add(exportacao);
         
-        //Adiciona o menu pai no menubar
         menuBar.add(menuExercicios);
          
            manipulcao.addActionListener(new ActionListener() {

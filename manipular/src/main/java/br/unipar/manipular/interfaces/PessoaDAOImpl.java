@@ -22,7 +22,6 @@ public class PessoaDAOImpl implements PessoaDAO {
         this.entityManager = entityManager;
     }
 
-
     @Override
     public Pessoa save(Pessoa pessoa) {
         EntityTransaction transaction = entityManager.getTransaction();

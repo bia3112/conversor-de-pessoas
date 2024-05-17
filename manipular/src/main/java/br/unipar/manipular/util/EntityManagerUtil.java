@@ -42,9 +42,8 @@ public class EntityManagerUtil {
     public static EntityManager getManager() {
         if(em == null || !em.isOpen()) {
             em = emf.createEntityManager();
-           JOptionPane.showMessageDialog(null, 
-                        "entity manager aberta!"
-                        );
+//           JOptionPane.showMessageDialog(null, 
+//                        "entity manager aberta!);
         }
         return em;
     }

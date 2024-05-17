@@ -1,11 +1,16 @@
 br\unipar\manipular\interfaces\PessoaDAO.class
 br\unipar\manipular\Menu\Menu.class
+br\unipar\manipular\ExportacaodeArquivos.class
 br\unipar\manipular\Menu\Menu$2.class
 br\unipar\manipular\TelaManipulacaoArquivo$1.class
+br\unipar\manipular\Menu\Menu$3.class
 br\unipar\manipular\tableModel\PessoaTableModel.class
 br\unipar\manipular\models\Pessoa_.class
 br\unipar\manipular\TelaManipulacaoArquivo$2.class
 br\unipar\manipular\interfaces\PessoaDAOImpl.class
+br\unipar\manipular\ExportacaodeArquivos$1.class
+br\unipar\manipular\TelaManipulacaoArquivo$3.class
+br\unipar\manipular\ExportacaodeArquivos$2.class
 br\unipar\manipular\models\Pessoa.class
 br\unipar\manipular\Menu\Menu$1.class
 br\unipar\manipular\TelaManipulacaoArquivo.class

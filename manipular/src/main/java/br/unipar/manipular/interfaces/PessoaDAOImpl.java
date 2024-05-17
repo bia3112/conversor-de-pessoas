@@ -8,6 +8,7 @@ import br.unipar.manipular.models.Pessoa;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -42,7 +43,9 @@ public class PessoaDAOImpl implements PessoaDAO {
         transaction.commit();
         entityManager.close();
         
-        System.out.println("Pessoa atualizado com sucesso!");
+        JOptionPane.showMessageDialog(null, 
+                        "Pessoa atualizado com sucesso!"
+                        );
         return pessoa;
     }
 
@@ -56,11 +59,15 @@ public class PessoaDAOImpl implements PessoaDAO {
             transaction.commit();
             entityManager.close();
 
-            System.out.println("Pessoa removido com sucesso!");
+           JOptionPane.showMessageDialog(null, 
+                        "Pessoa removido com sucesso!"
+                        );
             return true;
         } catch (Exception e) {
             transaction.rollback();
-            System.out.println("Pessoa atualizado com sucesso!");
+            JOptionPane.showMessageDialog(null, 
+                        "Pessoa atualizado com sucesso!"
+                        );
             return false;
         }
     }

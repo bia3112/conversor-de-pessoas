@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
@@ -49,6 +50,7 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         textAreaArquivo = new javax.swing.JTextArea();
+        btBuscar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Conversor de pessoa");
@@ -67,6 +69,14 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
         textAreaArquivo.setRows(5);
         jScrollPane1.setViewportView(textAreaArquivo);
 
+        btBuscar1.setForeground(new java.awt.Color(255, 51, 0));
+        btBuscar1.setText("Voltar");
+        btBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btBuscar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -80,8 +90,9 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(textArquivo, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(btBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addComponent(btBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jScrollPane1)))
@@ -94,7 +105,8 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelArquivo)
                     .addComponent(textArquivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btBuscar))
+                    .addComponent(btBuscar)
+                    .addComponent(btBuscar1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -137,6 +149,10 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btBuscarActionPerformed
 
+    private void btBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btBuscar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btBuscar1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -174,6 +190,7 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btBuscar;
+    private javax.swing.JButton btBuscar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
@@ -231,14 +248,20 @@ public class TelaManipulacaoArquivo extends javax.swing.JFrame {
 //                PessoaDAO dao = new PessoaDAO();
 //                dao.insert(pessoa);
 
-            }
             
+
+            }
+             JOptionPane.showMessageDialog(null, 
+                        "Arquivo importado com sucesso!");
             for(Pessoa pessoa : pessoaList) {
                 textAreaArquivo.append(pessoa.toString());
+               
             }
             
         } catch(IOException ex) {
-            System.out.println("Algo deu errado..." + ex.getMessage());
+           JOptionPane.showMessageDialog(null, 
+                        "Algo deu errado..", "Atenção",
+                        JOptionPane.ERROR_MESSAGE, null);
         }
     }
 }

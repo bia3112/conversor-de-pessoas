@@ -7,6 +7,7 @@ package br.unipar.manipular.util;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,7 +23,9 @@ public class EntityManagerUtil {
         if(emf == null) {
             emf = Persistence
                     .createEntityManagerFactory("ManipularArquivo");
-            System.out.println("conexão aberta!");
+           JOptionPane.showMessageDialog(null, 
+                        "conexão aberta!"
+                        );
         }
         return emf;
     }
@@ -30,14 +33,18 @@ public class EntityManagerUtil {
     public static void closeEntityManagerFactory() {
         if(emf != null && emf.isOpen()) {
             emf.close();
-            System.out.println("conexão fechada!");
+            JOptionPane.showMessageDialog(null, 
+                        "Deu erro ou conectar", "Atenção",
+                        JOptionPane.ERROR_MESSAGE, null);
         }
     }
     
     public static EntityManager getManager() {
         if(em == null || !em.isOpen()) {
             em = emf.createEntityManager();
-            System.out.println("entity manager aberta!");
+           JOptionPane.showMessageDialog(null, 
+                        "entity manager aberta!"
+                        );
         }
         return em;
     }

@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package br.unipar.manipular.Menu;
+import br.unipar.manipular.ExportacaodeArquivos;
 import br.unipar.manipular.TelaManipulacaoArquivo;
 import br.unipar.manipular.util.EntityManagerUtil;
 import java.awt.event.ActionEvent;
@@ -48,7 +49,12 @@ public class Menu  extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 new TelaManipulacaoArquivo().setVisible(true);
             }
+            
         });
+           exportacao.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new ExportacaodeArquivos().setVisible(true);
+            }});
         
         setJMenuBar(menuBar);
         
